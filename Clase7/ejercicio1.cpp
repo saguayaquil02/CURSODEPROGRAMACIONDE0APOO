@@ -2,7 +2,7 @@
 Arreglos 1D: carga y recorrido
 CLASE 7 - EJERCICIO1
 
-Autor: Jhonatan Torres
+Autor: Sebastian Guayaquil
 Fecha: 06 de mayo de 2026
 
 Enunciado: Realizar un programa en C++ que permita ingresar 5 notas enteras en un arreglo

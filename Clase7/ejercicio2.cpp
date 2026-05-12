@@ -2,7 +2,7 @@
 Arreglos 1D: busqueda secuencial en arreglos
 CLASE 7 - EJERCICIO2
 
-Autor: Jhonatan Torres
+Autor: Sebastian Guayaquil
 Fecha: 06 de mayo de 2026
 
 Enunciado: Realizar un programa en C++ que permita ingresar 6 numeros enteros en un arreglo
