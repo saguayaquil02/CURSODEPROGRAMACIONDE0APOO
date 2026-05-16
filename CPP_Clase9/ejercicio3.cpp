@@ -17,6 +17,7 @@ Desarrollar un programa que solicite 6 números enteros y luego muestre:
 El programa utiliza funciones y arreglos, pero contiene errores intencionales. 
 El estudiante debe corregirlo completamente y comprobar su funcionamiento. 
 */ 
+
 #include <iostream> 
 using namespace std; 
 
@@ -51,7 +52,7 @@ int main() {
 }
 
 // Al final hacemos las funciones que vamos a utilizar
-// Corregimos la identacion
+// Corregimos la identacion del codigo
 int calcularSuma(int numeros[], int n) { 
     int suma = 0; 
     for (int i = 0; i < n; i++) { 
