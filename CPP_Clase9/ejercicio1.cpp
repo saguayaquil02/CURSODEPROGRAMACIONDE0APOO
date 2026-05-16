@@ -41,6 +41,7 @@ int main() {
     double notas[N];
 
     cout << "INGRESO DE NOTAS" << endl;
+    // Llamada a la funcion para ingresar las notas
     ingresarNotas(notas, N);
     cout << "\nRESULTADOS" << endl;
     cout << "Promedio: " << calcularPromedio(notas, N) << endl;
@@ -50,8 +51,9 @@ int main() {
 return 0;
 }
 
+// Al final hacemos las funciones que vamos a usar
 void ingresarNotas(double notas[], int n){
-        // ERROR: recorrido fuera de rango
+    // ERROR: recorrido fuera de rango
     for (int i = 0; i < n; i++) { // error corregido i<=N
         cout << "Ingrese la nota " << i + 1 << ": ";
         cin >> notas[i];
@@ -79,13 +81,13 @@ double calcularPromedio(double notas[], int n) {
     return suma / n;
 }
 
-    double encontrarMayor(double notas[], int n) {
+double encontrarMayor(double notas[], int n) {
     // ERROR: iniciar en 0 puede fallar conceptualmente
-    double mayor = 0;
+    double mayor = notas[0]; // Error corregio mayor = 0, ahora la variable mayor se le asigna el valor de la posicion 0 del arreglo
 
     for (int i = 0; i < n; i++) {
         if (notas[i] > mayor) {
-            mayor = notas[i];
+        mayor = notas[i];
         }
     }
 
@@ -93,15 +95,15 @@ double calcularPromedio(double notas[], int n) {
 }
 
 int contarAprobadas(double notas[], int n) {
-int contador = 0;
+    int contador = 0;
 
-for (int i = 0; i < n; i++) {
-// ERROR: debería ser >= 14
+    for (int i = 0; i < n; i++) {
+    // ERROR: debería ser >= 14
 
-if (notas[i] > 14) {
-contador++;
-}
-}
+        if (notas[i] >= 14) { // error corregido: notas[i]>14 
+            contador++;
+        }
+    }
 
-return contador;
+    return contador;
 }
