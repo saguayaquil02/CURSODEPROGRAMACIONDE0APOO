@@ -2,7 +2,7 @@
 Tarea- Clase 8 - Ejercicio 1: Suma y promedio de 3 números
 
 Autor: Sebastian Guayaquil
-Fecha: 11 de mayo del 2026
+Fecha: 15 de mayo del 2026
 
 Enunciado: Desarrolla un programa que permita ingresar 3 números enteros y que use funciones
 para:
@@ -75,3 +75,35 @@ int main(){
 
     // Llamamos a la funcion para ingresar los 3 numeros en el arreglo
     leer3Numeros(numeros, 3);
+
+
+
+
+
+
+// esta funcion calula la suma de los numeros ingresados en el arreglo 
+double calcularSuma(double numeros[], int n){
+
+    // Inicializamos la vairable de sumas
+    double sum = 0;
+    // Bucler for para recorrer secuencialmente el arreglo
+    for (int i = 0; i < n; i++)
+    {
+        sum += numeros[i]; // acumulamos las sumas
+    }
+    return sum; // retornamos el total
+}
+
+// esta funcion calcula el promedio de las notas
+double calcularPromedio(double suma, int n){
+    double prom = suma/n;
+    return prom; // retornamos el valor del promedio
+}
+
+// esta funcion muestra los resultados obtenidos
+void mostrarResultados(double suma, double promedio){
+
+    //m mostrar los resultados
+    cout << "\nLa suma total es: " << suma << endl;
+    cout << "El promedio es: " << promedio << endl;
+}
