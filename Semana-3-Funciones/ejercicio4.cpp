@@ -71,9 +71,14 @@ int main() {
     // Llamamos a la funcion para leer los datos
     leerDatos(num1, num2);
 
+    // Llamada a la funcoin para mostrar los valores
+    cout << "\nValores antes del intercambio: " << endl;
+    mostrarValores(num1, num2);
+
     // Llamada a la funcoin Intercambiar
     intercambiar(num1, num2);
 
+    cout << "\nValores despues del intercambio: " << endl;
     // Llamada a la funcoin para mostrar los valores
     mostrarValores(num1, num2);
 
@@ -95,15 +100,12 @@ void leerDatos(int &num1, int &num2){
 
 // Funcoin paramMostrar valores ingresados
 void mostrarValores(int a, int b) {
-    cout << "\nValores despues del intercambio: " << endl;
-
     cout << "Numero 1: " << a << endl;
     cout << "Numero 2: " << b << endl;
 }
 
 // Función para intercambiar
 void intercambiar(int &a, int &b) {
-    cout << "\nValores antes del intercambio: " << endl;
     int temp = a;
     a = b;
     b = temp;
