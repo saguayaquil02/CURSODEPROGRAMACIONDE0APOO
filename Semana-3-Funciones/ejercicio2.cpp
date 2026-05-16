@@ -65,3 +65,40 @@ int main(){
 
     // Declaramos variables para resultados
     int num1, num2;
+
+
+
+
+
+// Esta funcion lee 2 numeros ingresados por el usuario
+void leerNumeros(int &num1, int &num2);{
+
+    cout << "Ingrese el primer numero: " << endl;
+    cin >> num1;
+    cout << "Ingrese el segundo numero: " << endl;
+    cin >> num2;
+}
+
+// esta funcion calula la suma de los numeros ingresados en el arreglo 
+int compararValores(int num1, int num2){
+
+    // Condicion para comparar los numeros
+    if (num1 > num2)
+    {
+        int n1 = num1;
+    }else if (num1 == num2){
+        int igual= num2;
+    }else{
+        
+    }
+
+// esta funcion muestra los resultados obtenidos
+void mostrarResultados(int num1, int num2, int resultado){
+
+    if(resultado == 1)
+        cout << "\nEl numero " << num1 << " es mayor que " << num2 << endl;
+    else if(resultado == -1)
+        cout << "\nEl numero " << num2 << " es mayor que " << num1 << endl;
+    else
+        cout << "\nAmbos numeros son iguales." << endl;
+}
