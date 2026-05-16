@@ -22,7 +22,6 @@ El estudiante debe corregirlo y probar cada opción del menú.
 using namespace std; 
 
 // Primero hacemos los prototipos de las funciones
-// agrego una funcion para mostar el menu
 double sumar(double a, double b);
 double restar(double a, double b);
 double multiplicar(double a, double b);
@@ -32,7 +31,7 @@ int main() {
     int opcion; 
     double n1, n2; 
     char continuar = 's'; 
- 
+
     while (continuar == 's') { 
         cout << "\nMENU DE OPERACIONES" << endl; 
         cout << "1. Sumar" << endl; 
@@ -46,27 +45,30 @@ int main() {
  
         // ERROR DE LOGICA: 
         // pide números incluso si elige salir 
-        cout << "Ingrese el primer numero: "; 
-        cin >> n1; 
-        cout << "Ingrese el segundo numero: "; 
-        cin >> n2; 
- 
         // ERRORES: uso incorrecto de '=' en condiciones 
-        if (opcion = 1) { 
+        // correcion: solo pedir numeros si no es salir
+        if (opcion >= 1 && opcion <= 4) {
+            cout << "Ingrese el primer numero: "; 
+            cin >> n1; 
+            cout << "Ingrese el segundo numero: "; 
+            cin >> n2; 
+        }
+
+        if (opcion == 1) { 
             cout << "Resultado: " << sumar(n1, n2) << endl; 
         } 
-        else if (opcion = 2) { 
+        else if (opcion == 2) { 
             cout << "Resultado: " << restar(n1, n2) << endl; 
         } 
-        else if (opcion = 3) { 
+        else if (opcion == 3) { 
             cout << "Resultado: " << multiplicar(n1, n2) << endl; 
         } 
-        else if (opcion = 4) { 
+        else if (opcion == 4) { 
             cout << "Resultado: " << dividir(n1, n2) << endl; 
         } 
         else if (opcion == 5) { 
             cout << "Saliendo del programa..." << endl; 
-            continuar == 'n'; 
+            continuar = 'n';  // se usa = para asignar, error: == estaba comparando
         } 
         else { 
             cout << "Opcion invalida." << endl; 
@@ -94,9 +96,9 @@ double multiplicar(double a, double b) {
 double dividir(double a, double b) { 
     // ERROR: no valida division para cero 
     // Si divide para cero el resultado es indefinido
-    if (b=0)
-    {
-        cout << "La division para cero no esta definida" << endl;
+    if (b == 0){
+        cout << "Error: La division para cero no esta definida: ";
+        return b;
     }else{
         return a/b;
     }
