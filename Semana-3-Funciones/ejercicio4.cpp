@@ -56,7 +56,7 @@ Fin
 #include <iostream>
 using namespace std;
 
-// Prototipos// Prototipos de funciones
+// Prototipos de funciones
 // Colocamos solo nos nombres y parametros de las funciones que vamos a usar
 void leerDatos(int &num1, int &num2);
 void mostrarValores(int a, int b);

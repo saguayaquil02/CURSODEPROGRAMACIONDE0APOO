@@ -54,7 +54,8 @@ Fin
 #include <iostream>
 using namespace std;
 
-// Prototipos
+// Prototipos de funciones
+// Colocamos solo nos nombres y parametros de las funciones que vamos a usar
 void leerNumero(int &n);
 void incrementarContador(int &contador);
 void mostrarContador(int contador);
@@ -65,3 +66,27 @@ int main() {
     int contador = 0;
 
     leerNumero(n);
+
+}
+
+// Funcion para que el usuario ingrese un numero, pero que no sea negativo
+void leerNumero(int &n){
+
+    cout << "Ingrese un numero entero positivo: ";
+    cin >> n;
+
+    while (n <= 0) {
+        cout << "Error. Ingrese un numero positivo: ";
+        cin >> n;
+    }
+}
+
+// Función que modifica el contador (PASO POR REFERENCIA)
+void incrementarContador(int &contador) {
+    contador++;
+}
+
+// Mostrar valor del contador
+void mostrarContador(int contador) {
+    cout << "Contador: " << contador << endl;
+}
