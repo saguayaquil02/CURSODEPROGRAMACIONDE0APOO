@@ -72,6 +72,7 @@ int main(){
     // Llamamos a la funcion compararValores y el retorno lo guardamos en una variable
     resultado = compararValores(num1, num2);
 
+    // Llamamos a la funcion para mostrar los resultados obtenidos
     mostrarResultados(num1, num2, resultado);
 
     return 0;
@@ -88,8 +89,7 @@ void leerNumeros(int &num1, int &num2){
     cin >> num2;
 }
 
-// esta funcion calula la suma de los numeros ingresados en el arreglo 
-
+// esta funcion compara el valor de los numeros y determina cuál es mayor o si ambas son iguales
 int compararValores(int num1, int num2){
 
     if(num1 > num2)
