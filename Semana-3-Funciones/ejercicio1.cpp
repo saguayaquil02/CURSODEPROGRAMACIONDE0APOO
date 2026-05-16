@@ -76,6 +76,17 @@ int main(){
     // Llamamos a la funcion para ingresar los 3 numeros en el arreglo
     leer3Numeros(numeros, 3);
 
+    // Llamamos a la funcion para calular la Suma de los numeros
+    suma = calcularSuma(numeros, 3);
+    
+    // Llamamos a la funcion para calular el promedio
+    promedio = calcularPromedio(suma, 3);
+    
+    // Llamamos a la funcion para mostrar los resultados
+    mostrarResultados(suma,promedio);
+
+    return 0;
+}
 
 
 
