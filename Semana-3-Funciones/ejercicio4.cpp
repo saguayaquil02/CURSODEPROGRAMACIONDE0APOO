@@ -86,3 +86,15 @@ void leerDatos(int &num1, int &num2){
     cin >> num2;
 }
 
+// Funcoin paramMostrar valores ingresados
+void mostrarValores(int a, int b) {
+    cout << "Numero 1: " << a << endl;
+    cout << "Numero 2: " << b << endl;
+}
+
+// Función para intercambiar
+void intercambiar(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
