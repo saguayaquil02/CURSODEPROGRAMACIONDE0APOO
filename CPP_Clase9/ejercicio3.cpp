@@ -19,6 +19,38 @@ El estudiante debe corregirlo completamente y comprobar su funcionamiento.
 */ 
 #include <iostream> 
 using namespace std; 
+
+// Primero hacemos los prototipos de las funciones
+int calcularSuma(int numeros[], int n);
+int encontrarMayor(int numeros[], int n);
+int encontrarMenor(int numeros[], int n);
+int contarPares(int numeros[], int n);
+int contarNegativos(int numeros[], int n);
+
+// Luego hacemos la funcion int main
+
+int main() { 
+    const int N = 6; 
+    int numeros[N]; 
+ 
+    cout << "Ingrese 6 numeros enteros:" << endl; 
+ 
+    // ERROR: recorrido fuera de rango 
+    for (int i = 0; i <= N; i++) { 
+        cout << "Numero " << i + 1 << ": "; 
+        cin >> numeros[i]; 
+    } 
+ 
+    cout << "\nRESULTADOS" << endl; 
+    cout << "Suma total: " << calcularSuma(numeros, N) << endl; 
+    cout << "Numero mayor: " << encontrarMayor(numeros, N) << endl; 
+    cout << "Numero menor: " << encontrarMenor(numeros, N) << endl; 
+    cout << "Cantidad de pares: " << contarPares(numeros, N) << endl; 
+    cout << "Cantidad de negativos: " << contarNegativos(numeros, N) << endl; 
+    return 0; //Error corregido, ;
+}
+
+// Al final hacemos las funciones que vamos a utilizar
 int calcularSuma(int numeros[], int n) { 
 int suma = 0; 
 for (int i = 0; i < n; i++) { 
@@ -73,24 +105,3 @@ int contarNegativos(int numeros[], int n) {
  
     return contador; 
 } 
- 
-int main() { 
-    const int N = 6; 
-    int numeros[N]; 
- 
-    cout << "Ingrese 6 numeros enteros:" << endl; 
- 
-    // ERROR: recorrido fuera de rango 
-    for (int i = 0; i <= N; i++) { 
-        cout << "Numero " << i + 1 << ": "; 
-        cin >> numeros[i]; 
-    } 
- 
-    cout << "\nRESULTADOS" << endl; 
-    cout << "Suma total: " << calcularSuma(numeros, N) << endl; 
-    cout << "Numero mayor: " << encontrarMayor(numeros, N) << endl; 
-    cout << "Numero menor: " << encontrarMenor(numeros, N) << endl; 
-    cout << "Cantidad de pares: " << contarPares(numeros, N) << endl; 
-    cout << "Cantidad de negativos: " << contarNegativos(numeros, N) << endl; 
-return 0 
-}
