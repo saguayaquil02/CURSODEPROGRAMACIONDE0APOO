@@ -20,19 +20,14 @@ El estudiante debe corregirlo y probar cada opción del menú.
 */ 
 #include <iostream> 
 using namespace std; 
-double sumar(double a, double b) { 
-return a + b; 
-} 
-double restar(double a, double b) { 
-return a - b; 
-} 
-double multiplicar(double a, double b) { 
-return a * b; 
-} 
-double dividir(double a, double b) { 
-// ERROR: no valida division para cero 
-return a / b; 
-} 
+
+// Primero hacemos los prototipos de las funciones
+// agrego una funcion para mostar el menu
+double sumar(double a, double b);
+double restar(double a, double b);
+double multiplicar(double a, double b);
+double dividir(double a, double b);
+
 int main() { 
     int opcion; 
     double n1, n2; 
@@ -85,3 +80,24 @@ int main() {
  
     return 0; 
 }
+
+// Al final hacemos las funciones que vamos a utilizar
+double sumar(double a, double b) { 
+    return a + b; 
+} 
+double restar(double a, double b) { 
+    return a - b; 
+} 
+double multiplicar(double a, double b) { 
+    return a * b; 
+} 
+double dividir(double a, double b) { 
+    // ERROR: no valida division para cero 
+    // Si divide para cero el resultado es indefinido
+    if (b=0)
+    {
+        cout << "La division para cero no esta definida" << endl;
+    }else{
+        return a/b;
+    }
+} 
