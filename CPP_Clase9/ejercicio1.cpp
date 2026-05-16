@@ -23,30 +23,73 @@ El estudiante debe corregir el código y verificar su funcionamiento con pruebas
 #include <iostream>
 using namespace std;
 
+// Ordenar bien el codigo
+// Primero tenemos que tener el prototipo de las funciones
+
+//Prototipo de funciones
+// Agregamos una funcion para el ingreso de notas
+void ingresarNotas(double notas[], int n);
+double calcularPromedio(double notas[], int n);
+double encontrarMayor(double notas[], int n);
+int contarAprobadas(double notas[], int n);
+
+// Duespues va la funcion int main
+int main() {
+    // Corregimos la identacion
+    // Declaramos las variables necesaarias
+    const int N = 5;
+    double notas[N];
+
+    cout << "INGRESO DE NOTAS" << endl;
+    ingresarNotas(notas, N);
+    cout << "\nRESULTADOS" << endl;
+    cout << "Promedio: " << calcularPromedio(notas, N) << endl;
+    cout << "Nota mayor: " << encontrarMayor(notas, N) << endl;
+    cout << "Cantidad de aprobadas: " << contarAprobadas(notas, N) << endl;
+
+return 0;
+}
+
+void ingresarNotas(double notas[], int n){
+        // ERROR: recorrido fuera de rango
+    for (int i = 0; i < n; i++) { // error corregido i<=N
+        cout << "Ingrese la nota " << i + 1 << ": ";
+        cin >> notas[i];
+
+        // ERROR DE LOGICA:
+        // valida mal porque permite mayores a 20 y no controla negativas correctamente
+        while (notas[i] < 0 || notas[i] > 20) {
+            cout << "Nota invalida. Ingrese nuevamente: ";
+            cin >> notas[i];
+        }
+    }
+}
+
+
 double calcularPromedio(double notas[], int n) {
-double suma = 0;
+    // declaramos al variable sumador
+    double suma = 0;
 
-// ERROR: recorrido fuera de rango
+    // ERROR: recorrido fuera de rango
+    for (int i = 0; i < n; i++) { // Error corregido i<=n
+        suma = suma + notas[i];
+    }
 
-for (int i = 0; i <= n; i++) {
-suma = suma + notas[i];
+    // ERROR: puede funcionar mal por el recorrido anterior
+    return suma / n;
 }
 
-// ERROR: puede funcionar mal por el recorrido anterior
-return suma / n;
-}
+    double encontrarMayor(double notas[], int n) {
+    // ERROR: iniciar en 0 puede fallar conceptualmente
+    double mayor = 0;
 
-double encontrarMayor(double notas[], int n) {
-// ERROR: iniciar en 0 puede fallar conceptualmente
-double mayor = 0;
+    for (int i = 0; i < n; i++) {
+        if (notas[i] > mayor) {
+            mayor = notas[i];
+        }
+    }
 
-for (int i = 0; i < n; i++) {
-if (notas[i] > mayor) {
-mayor = notas[i];
-}
-}
-
-return mayor;
+    return mayor;
 }
 
 int contarAprobadas(double notas[], int n) {
@@ -61,31 +104,4 @@ contador++;
 }
 
 return contador;
-}
-
-int main() {
-const int N = 5;
-double notas[N];
-
-cout << "INGRESO DE NOTAS" << endl;
-
-// ERROR: recorrido fuera de rango
-for (int i = 0; i <= N; i++) {
-cout << "Ingrese la nota " << i + 1 << ": ";
-cin >> notas[i];
-
-// ERROR DE LOGICA:
-// valida mal porque permite mayores a 20 y no controla negativas correctamente
-while (notas[i] < 0 && notas[i] > 20) {
-cout << "Nota invalida. Ingrese nuevamente: ";
-cin >> notas[i];
-}
-}
-
-cout << "\nRESULTADOS" << endl
-cout << "Promedio: " << calcularPromedio(notas, N) << endl;
-cout << "Nota mayor: " << encontrarMayor(notas, N) << endl;
-cout << "Cantidad de aprobadas: " << contarAprobadas(notas, N) << endl;
-
-return 0;
 }
