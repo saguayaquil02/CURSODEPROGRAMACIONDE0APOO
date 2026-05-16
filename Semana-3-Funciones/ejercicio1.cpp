@@ -88,9 +88,17 @@ int main(){
     return 0;
 }
 
+// Esta funcion lee 3 numeros ingresados por el usuario y los guarda en un arreglo
+void leer3Numeros(double numeros[],int n){
 
-
-
+    // bucle para recorrer el arreglo e ingresar datos
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Ingrese la nota" << i+1 << ": ";
+        cin >> numeros[i];
+    }
+    
+}
 
 // esta funcion calula la suma de los numeros ingresados en el arreglo 
 double calcularSuma(double numeros[], int n){
