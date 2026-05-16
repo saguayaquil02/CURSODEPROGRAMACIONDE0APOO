@@ -66,12 +66,15 @@ int main(){
     double base, altura, area;
 
     // Llamamos a la funcion para leer los datos: base y altura
-    leerDatos(base,altura);
+    leerDatos(base, altura);
 
     // Llamamos a la funcion para calular el area del rectangulo
-    calcularArea(base, altura);
+    area = calcularArea(base, altura);
 
     // Llamamos a la funcion para mostar los resultados
+    mostrarResultados(area);
+
+    return 0;
 }
 
 
@@ -80,6 +83,12 @@ void leerDatos(double &base, double &altura){
     
     // Indicar al usuario que ingrese la base y la altura del rectangulo
     cout << "\n---- Area de un rectangulo -----" << endl;
+
+    cout << "Ingrese la base: ";
+    cin >> base;
+
+    cout << "Ingrese la altura: ";
+    cin >> altura;
 
     // Bucle while por si el usuario ingresa valores negativos 
     while (base < 0 || altura < 0)
