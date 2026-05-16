@@ -36,7 +36,7 @@ int main() {
     cout << "Ingrese 6 numeros enteros:" << endl; 
  
     // ERROR: recorrido fuera de rango 
-    for (int i = 0; i <= N; i++) { 
+    for (int i = 0; i < N; i++) { // corregido: i<=N
         cout << "Numero " << i + 1 << ": "; 
         cin >> numeros[i]; 
     } 
@@ -51,26 +51,29 @@ int main() {
 }
 
 // Al final hacemos las funciones que vamos a utilizar
+// Corregimos la identacion
 int calcularSuma(int numeros[], int n) { 
-int suma = 0; 
-for (int i = 0; i < n; i++) { 
-suma = suma + numeros[i]; 
+    int suma = 0; 
+    for (int i = 0; i < n; i++) { 
+        suma = suma + numeros[i]; 
+    } 
+    return suma; 
 } 
-return suma; 
-} 
+
 int encontrarMayor(int numeros[], int n) { 
-// ERROR: iniciar en 0 da problemas si todos son negativos 
-int mayor = 0; 
-for (int i = 0; i < n; i++) { 
-if (numeros[i] > mayor) { 
-mayor = numeros[i]; 
+    // ERROR: iniciar en 0 da problemas si todos son negativos 
+    int mayor = numeros[0]; // error corregido: mayor = 0 
+    for (int i = 0; i < n; i++) { 
+        if (numeros[i] > mayor) { 
+            mayor = numeros[i]; 
+        } 
+    } 
+    return mayor; 
 } 
-} 
-return mayor; 
-} 
+
 int encontrarMenor(int numeros[], int n) { 
 // ERROR: iniciar en 0 da problemas si todos son positivos 
-int menor = 0; 
+int menor = numeros[0]; // error corregido: menor = 0;
 for (int i = 0; i < n; i++) { 
         if (numeros[i] < menor) { 
             menor = numeros[i]; 
@@ -85,7 +88,7 @@ int contarPares(int numeros[], int n) {
  
     for (int i = 0; i < n; i++) { 
         // ERROR: cuenta impares 
-        if (numeros[i] % 2 != 0) { 
+        if (numeros[i] % 2 == 0) { // error corregido: %2 !=0
             contador++; 
         } 
     } 
@@ -97,7 +100,7 @@ int contarNegativos(int numeros[], int n) {
     int contador = 0; 
  
     // ERROR: recorrido fuera de rango 
-    for (int i = 0; i <= n; i++) { 
+    for (int i = 0; i < n; i++) { // error corregido: i<=n 
         if (numeros[i] < 0) { 
             contador++; 
         } 
