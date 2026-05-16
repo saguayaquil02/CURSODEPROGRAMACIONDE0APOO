@@ -56,7 +56,7 @@ using namespace std;
 
 // Prototipos de funciones
 // Colocamos solo nos nombres y parametros de las funciones que vamos a usar
-void leerNumeros(double &base, double &altura); // usamos paso por referencia
+void leerDatos(double &base, double &altura); // usamos paso por referencia
 double calcularArea(double base, double altura);
 void mostrarResultados(double area);
 
@@ -65,20 +65,32 @@ int main(){
     // Declaramos las variables para resultados
     double base, altura, area;
 
-    // 
+    // Llamamos a la funcion para leer los datos: base y altura
+    leerDatos(base,altura);
+
+    // Llamamos a la funcion para calular el area del rectangulo
+    calcularArea(base, altura);
+
+    // Llamamos a la funcion para mostar los resultados
 }
 
 
 // Funcion para pedir al usuario que ingrese los datos: base y altura
-void leerNumeros(double &base, double altura){
+void leerDatos(double &base, double &altura){
     
     // Indicar al usuario que ingrese la base y la altura del rectangulo
     cout << "\n---- Area de un rectangulo -----" << endl;
-    cout << "Ingrese la base: ";
-    cin >> base;
 
-    cout << "Ingrese la altura: ";
-    cin >> altura;
+    // Bucle while por si el usuario ingresa valores negativos 
+    while (base < 0 || altura < 0)
+    {
+        cout << "Error: los datos deben ser numeros positivos" << endl;
+        cout << "Ingrese la base: ";
+        cin >> base;
+        cout << "Ingrese la altura: ";
+        cin >> altura;
+    }
+    
 }
 
 // Funcion para calular el area del rectangulo
