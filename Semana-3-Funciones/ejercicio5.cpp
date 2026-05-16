@@ -65,7 +65,17 @@ int main() {
     int n;
     int contador = 0;
 
+    // Llamada a la funcion para leer el numero
     leerNumero(n);
+
+    cout << "\nIncremento de contador: " << endl;
+
+    while (contador < n) {
+        incrementarContador(contador);
+        mostrarContador(contador);
+    }
+
+    return 0;
 
 }
 
