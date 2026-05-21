@@ -8,7 +8,7 @@ public class App {
         Estudiante estudiante1 = new Estudiante(); // Aqiu creamos nuestro primer objeto de la clase estudiante
 
         estudiante1.nombre = "Ana";
-        estudiante1.edad = 22;
+        estudiante1.edad = 23;
         estudiante1.carrera = "Inicial";
 
         Estudiante estudiante2 = new Estudiante(); // Aqui creamos el segundo objeto de 
