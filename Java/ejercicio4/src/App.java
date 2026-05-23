@@ -12,8 +12,25 @@ El sistema debe contar con:
     recorrido que muestre la informacion y sonido de cada animal 
 */
 
+//
+import java.util.ArrayList;
+
 public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+    public static void main(String[] args){
+        // Creamos una lista de tipo Animal
+        // Esto es importante porque aqui podremos guardar objetos perro y gato
+        ArrayList<Animal> animales = new ArrayList<>();
+
+        // Agregamos objetos de dsitintas subclases
+        animales.add(new Perro("Firulais", 3));
+        animales.add(new Gato("Pechas", 5));
+        animales.add(new Perro("Jack", 1));
+
+        // Recorremos la lista
+        for(Animal animal: animales){
+            animal.mostarInfo();
+            animal.hacerSonido();
+            System.out.println("-----------------");
+        }
     }
 }
