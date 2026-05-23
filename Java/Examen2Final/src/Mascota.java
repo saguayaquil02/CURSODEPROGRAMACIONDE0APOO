@@ -19,7 +19,7 @@ public class Mascota {
 
     // Metodos
     // Mostrar la informacion de la mascota
-    public void mostarInfo(){
+    public void mostrarInfo(){
         System.out.println("ID: " + id);
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
