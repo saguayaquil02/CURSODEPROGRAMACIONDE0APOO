@@ -17,5 +17,4 @@ public class Perro extends Mascota { // Usamos extends para que sea una subclase
     public String hacerSonido() {
         return "Guau guau"; // Sonido específico del perro
     }
-
 }
