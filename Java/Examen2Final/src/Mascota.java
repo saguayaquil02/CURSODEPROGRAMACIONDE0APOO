@@ -30,4 +30,28 @@ public class Mascota {
         return "La mascota hace un sonido"; // Retornamos el valor en String
     }
 
+    // Metodos para getters y setters
+    public int getId(){ // get para leer el id de la mascota
+        return id;
+    }
+
+    public void setId(int id){ // set para cambiar el id
+        this.id = id; // inicializamos la variable
+    }
+
+    public String getNombre(){ 
+        return nombre; // retorna el nombre de la mascota
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre; // inicializamos la variable
+    }
+
+    public int getEdad() { // get para leer la edad de la mascota
+        return edad;
+    }
+
+    public void setEdad(int edad) { // set para cambiar la edad
+        this.edad = edad; // inicializamos la variable
+    }
 }
