@@ -17,6 +17,11 @@ public class Telefono {
         // Inicializamos los datos
         this.marca = marca;
         this.modelo = modelo;
+        if (precio >= 0) {
+            this.precio = precio;
+        } else {
+            this.precio = 0; // colocamos el precio en cero para evitar valores negativos
+        }
     }
 
     // Getters
@@ -41,7 +46,7 @@ public class Telefono {
         this.marca = marca;
     }
 
-    // Cambiar marca
+    // Cambiar modelo
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
@@ -59,7 +64,7 @@ public class Telefono {
     // Método para mostrar la informacion
     public void mostrarInfo() {
         System.out.println("=================================");
-        System.out.println("      DATOS DEL TELÉFONO         ");
+        System.out.println("      DATOS DEL TELEFONO         ");
         System.out.println("=================================");
         System.out.println("Marca:  " + marca);
         System.out.println("Modelo: " + modelo);
