@@ -18,3 +18,52 @@ public class Telefono {
         this.marca = marca;
         this.modelo = modelo;
     }
+
+    // Getters
+    // Leer la marca
+    public String getMarca() {
+        return marca;
+    }
+
+    //  Leer el modelo
+    public String getModelo() {
+        return modelo;
+    }
+
+    // leer el precio
+    public double getPrecio() {
+        return precio;
+    }
+
+    // Setters
+    // Cambiar marca
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    // Cambiar marca
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    // Validacion
+    public void setPrecio(double precio) {
+        if (precio >= 0) {
+            this.precio = precio; // Si es valido, lo guardamos
+        } else {
+            // Si es negativo, bloqueamos el cambio y avisamos
+            System.out.println("Error: El precio no puede ser negativo");
+        }
+    }
+
+    // Método para mostrar la informacion
+    public void mostrarInfo() {
+        System.out.println("=================================");
+        System.out.println("      DATOS DEL TELÉFONO         ");
+        System.out.println("=================================");
+        System.out.println("Marca:  " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Precio: $" + precio);
+        System.out.println("=================================\n");
+    }
+}
