@@ -10,7 +10,7 @@ Clase padre que presenta una mascota en general
 Aqui colocamos lo que todos los animales tienen en comun
 */
 public class Mascota {
-    // Atributos privados
+    // Atributos
     protected String nombre;
     protected String especie;
     protected int edad;
