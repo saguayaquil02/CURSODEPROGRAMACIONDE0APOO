@@ -17,11 +17,8 @@ public class Telefono {
         // Inicializamos los datos
         this.marca = marca;
         this.modelo = modelo;
-        if (precio >= 0) {
-            this.precio = precio;
-        } else {
-            this.precio = 0; // colocamos el precio en cero para evitar valores negativos
-        }
+        // Cmabio llamo al metodo setPrecio
+        setPrecio(precio); // El setter se encarga de validar y asignar desde el inicio
     }
 
     // Getters
@@ -51,7 +48,7 @@ public class Telefono {
         this.modelo = modelo;
     }
 
-    // Validacion
+    // Validacion, puedo utilizar esta validacion en el constructor
     public void setPrecio(double precio) {
         if (precio >= 0) {
             this.precio = precio; // Si es valido, lo guardamos
