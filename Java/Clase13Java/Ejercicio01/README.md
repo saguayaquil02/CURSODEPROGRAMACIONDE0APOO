@@ -1,18 +1,20 @@
-## Getting Started
+# Ejercicio1: Clase 13 - Mascota (POO en Java)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este programa en **Java** sirve para introducir los conceptos esenciales de la **Programación Orientada a Objetos (POO)**. Se enfoca en la creación de una clase base, la inicialización de atributos mediante un constructor y el despliegue de información de múltiples objetos.
 
-## Folder Structure
+## Objetivos Evaluados
 
-The workspace contains two folders by default, where:
+* **Modelado de Clases:** Definición de una entidad del mundo real (`Mascota`) con sus características fundamentales.
+* **Uso de Modificadores de Acceso:** Empleo del modificador `protected` para definir el alcance de los atributos de la clase.
+* **Construcción de Objetos:** Implementación de un constructor clásico utilizando la palabra clave `this` para asignar valores iniciales.
+* **Instanciación Múltiple:** Creación y gestión en paralelo de distintos objetos (`mascota1` y `mascota2`) desde la clase principal.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Estructura del Proyecto
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+El código está organizado en dos componentes:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. **`Mascota.java`:** Define la estructura del objeto con sus atributos (`nombre`, `especie`, `edad`), un constructor parametrizado y el método `mostrarInfo()` para imprimir los datos en la consola.
+2. **`App.java`:** Contiene el punto de entrada del programa (`main`), donde se instancian dos mascotas de prueba ("Jack" y "Pechas") y se invoca su método de impresión para mostrar los resultados.
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Autor
+Programa desarrollado por Sebastian Guayaquil

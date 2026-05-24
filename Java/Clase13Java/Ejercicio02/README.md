@@ -1,18 +1,20 @@
-## Getting Started
+# Ejercicio 2: Clase 13 - Teléfono (POO en Java)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este programa desarrollado en **Java** sirve para poner en práctica los pilares fundamentales de la **Programación Orientada a Objetos (POO)**, con un enfoque principal en el encapsulamiento y la validación de datos dentro de una clase.
 
-## Folder Structure
+## Objetivos Evaluados
 
-The workspace contains two folders by default, where:
+* **Encapsulamiento:** Uso de modificadores de acceso privados (`private`) para proteger los atributos de la clase.
+* **Métodos de Acceso:** Implementación de `getters` y `setters` para la consulta y modificación segura de los datos.
+* **Validación de Datos:** Restricción lógica en el método `setPrecio` para evitar el ingreso de valores negativos.
+* **Instanciación y Uso:** Creación e interacción con objetos desde la clase principal (`App`).
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Estructura del programa
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+El programa consta de dos clases principales:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. **`Telefono.java`:** Contiene el molde del objeto con sus atributos privados (`marca`, `modelo`, `precio`), el constructor, los métodos de acceso y el método `mostrarInfo()` para imprimir el estado del objeto.
+2. **`App.java`:** Contiene la clase principal con el método `main`, donde se crea un teléfono de prueba, se manipulan sus datos y se comprueba el correcto funcionamiento de las validaciones ante cambios de valores válidos e inválidos.
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Autor
+Programa desarrollado por Sebastian Guayaquil
