@@ -9,7 +9,7 @@ Este programa en **Java** sirve para introducir los conceptos esenciales de la *
 * **Construcción de Objetos:** Implementación de un constructor clásico utilizando la palabra clave `this` para asignar valores iniciales.
 * **Instanciación Múltiple:** Creación y gestión en paralelo de distintos objetos (`mascota1` y `mascota2`) desde la clase principal.
 
-## Estructura del Proyecto
+## Estructura del Programa
 
 El código está organizado en dos componentes:
 
